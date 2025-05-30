@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Arombho Clothing Store</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .header {
+      background-color: #007bff;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: center;
+      background-color: #0056b3;
+      padding: 0.5rem 0;
+      flex-wrap: wrap;
+    }
+
+    .nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-size: 1rem;
+    }
+
+    .nav a:hover {
+      text-decoration: underline;
+    }
+
+    .search-bar {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .search-bar input {
+      padding: 6px 10px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    .search-bar button {
+      padding: 6px 12px;
+      background-color: #1976d2;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .search-bar button:hover {
+      background-color: #0d47a1;
+    }
+
+    .products {
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    .products h2 {
+      margin-bottom: 1.5rem;
+    }
+
+    .product-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .product {
+      width: 200px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      overflow: hidden;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .product img {
+      width: 100%;
+      height: auto;
+    }
+
+    .product:hover {
+      transform: scale(1.05);
+    }
+
+    .product h3 {
+      margin: 0;
+      padding: 1rem;
+      background-color: #f8f8f8;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #007bff;
+      color: white;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Arombho Clothing Store</h1>
+  </div>
+
+  <div class="nav">
+    <a href="#">Home</a>
+    <a href="registration.html">Registration</a>
+    <a href="user.html">User</a>
+    <a href="admin.html">Admin</a>
+    <a href="about.html">About Us</a>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search..." />
+      <button type="button" onclick="searchProducts()">Search</button>
+    </div>
+  </div>
+
+  <div class="products">
+    <h2>Our Products</h2>
+    <div class="product-grid">
+      <a href="traditional.html" class="product" data-category="traditional">
+        <img src="t1.png" alt="Traditional Wear">
+        <h3>Traditional Wear</h3>
+      </a>
+      <a href="Elegent.html" class="product" data-category="elegant">
+        <img src="E1.jpg" alt="Elegant Design">
+        <h3>Elegant Design</h3>
+      </a>
+      <a href="casual.html" class="product" data-category="casual">
+        <img src="C1.jpg" alt="Casual Wear">
+        <h3>Casual Wear</h3>
+      </a>
+      <a href="party.html" class="product" data-category="party">
+        <img src="P4.jpg" alt="Party Wear">
+        <h3>Party Wear</h3>
+      </a>
+      <a href="Saree.html" class="product" data-category="saree">
+        <img src="S4.jpg" alt="Sarees Collection">
+        <h3>Sarees Collection</h3>
+      </a>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>&copy; 2025 Arombho Clothing Store. All Rights Reserved.</p>
+  </div>
+
+  <script>
+    function searchProducts() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const products = document.querySelectorAll(".product");
+
+      products.forEach(product => {
+        const category = product.getAttribute("data-category");
+        if (category.includes(input) || input === "") {
+          product.style.display = "block";
+        } else {
+          product.style.display = "none";
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>

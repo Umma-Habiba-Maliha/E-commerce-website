@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Womens Collection</title>
+    <style>
+
+        /* Products Section */
+        .products
+        {
+        text-align: center;
+        padding: 2rem 1rem;
+        }
+
+        .product-grid 
+        {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .product {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="products">
+        <h2>Womens Collection</h2>
+        <div class="product-grid">
+            <a href="traditional.html" class="product">
+                <img src="t1.png" alt="Traditional Wear">
+                <h3>Traditional Wear</h3>
+            </a>
+            <a href="Elegent.html" class="product">
+                <img src="E1.jpg" alt="Elegant Design">
+                <h3>Elegant Design</h3>
+            </a>
+            <a href="casual.html" class="product">
+                <img src="C1.jpg" alt="Casual Wear">
+                <h3>Casual Wear</h3>
+            </a>
+            <a href="party.html" class="product">
+                <img src="P4.jpg" alt="Party Wear">
+                <h3>Party Wear</h3>
+            </a>
+            <a href="Saree.html" class="product">
+                <img src="S4.jpg" alt="Sarees Collection">
+                <h3>Sarees Collection</h3>
+            </a>
+        </div>
+    </div>
+    
+</body>
+</html>

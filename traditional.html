@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Traditional Wear</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .header {
+      background-color: #007bff;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .header h1 {
+      margin: 0;
+    }
+
+    .product-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+
+    .product {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      overflow: hidden;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+      width: 30%;
+      max-width: 250px;
+      padding-bottom: 1rem;
+    }
+
+    .product img {
+      width: 100%;
+      height: auto;
+    }
+
+    .product:hover {
+      transform: scale(1.05);
+    }
+
+    .product h3 {
+      margin: 0.5rem 0;
+    }
+
+    .product p {
+      margin: 0.5rem 0;
+      background-color: #f8f8f8;
+      font-weight: bold;
+    }
+
+    .cart-controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin-top: 0.5rem;
+    }
+
+    .cart-controls button {
+      padding: 5px 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .add-to-cart-btn {
+      margin-top: 10px;
+      padding: 8px 15px;
+      background-color: #28a745;
+      border: none;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .add-to-cart-btn:hover {
+      background-color: #218838;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #007bff;
+      color: white;
+      margin-top: 2rem;
+    }
+
+    .price-display {
+      margin-top: 5px;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Traditional Wear</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="product-grid">
+    <div class="product">
+      <img src="t1.png" alt="Dress 1">
+      <h3>Lavender pink</h3>
+      <p>Price: $<span class="unit-price">50</span></p>
+      <div class="cart-controls">
+        <button onclick="changeQty(this, -1)">−</button>
+        <span class="quantity">0</span>
+        <button onclick="changeQty(this, 1)">+</button>
+      </div>
+      <div class="price-display">Total: $<span class="total-price">0</span></div>
+      <button class="add-to-cart-btn" onclick="addToCart(this)">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="t2.jpg" alt="Dress 2">
+      <h3>Mof color</h3>
+      <p>Price: $<span class="unit-price">60</span></p>
+      <div class="cart-controls">
+        <button onclick="changeQty(this, -1)">−</button>
+        <span class="quantity">0</span>
+        <button onclick="changeQty(this, 1)">+</button>
+      </div>
+      <div class="price-display">Total: $<span class="total-price">0</span></div>
+      <button class="add-to-cart-btn" onclick="addToCart(this)">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="t3.jpg" alt="Dress 3">
+      <h3>Burgundy red</h3>
+      <p>Price: $<span class="unit-price">70</span></p>
+      <div class="cart-controls">
+        <button onclick="changeQty(this, -1)">−</button>
+        <span class="quantity">0</span>
+        <button onclick="changeQty(this, 1)">+</button>
+      </div>
+      <div class="price-display">Total: $<span class="total-price">0</span></div>
+      <button class="add-to-cart-btn" onclick="addToCart(this)">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="t5.jpg" alt="Dress 4">
+      <h3>Sea green</h3>
+      <p>Price: $<span class="unit-price">40</span></p>
+      <div class="cart-controls">
+        <button onclick="changeQty(this, -1)">−</button>
+        <span class="quantity">0</span>
+        <button onclick="changeQty(this, 1)">+</button>
+      </div>
+      <div class="price-display">Total: $<span class="total-price">0</span></div>
+      <button class="add-to-cart-btn" onclick="addToCart(this)">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="t6.jpg" alt="Dress 5">
+      <h3>Crystal Onion</h3>
+      <p>Price: $<span class="unit-price">55</span></p>
+      <div class="cart-controls">
+        <button onclick="changeQty(this, -1)">−</button>
+        <span class="quantity">0</span>
+        <button onclick="changeQty(this, 1)">+</button>
+      </div>
+      <div class="price-display">Total: $<span class="total-price">0</span></div>
+      <button class="add-to-cart-btn" onclick="addToCart(this)">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>&copy; 2025 Arombho Clothing Store. All Rights Reserved.</p>
+  </div>
+
+  <script>
+    function changeQty(button, delta) {
+      const product = button.closest('.product');
+      const qtySpan = product.querySelector('.quantity');
+      const unitPrice = parseFloat(product.querySelector('.unit-price').textContent);
+      const totalSpan = product.querySelector('.total-price');
+
+      let qty = parseInt(qtySpan.textContent);
+      qty += delta;
+      if (qty < 0) qty = 0;
+
+      qtySpan.textContent = qty;
+      totalSpan.textContent = (qty * unitPrice).toFixed(2);
+    }
+
+    function addToCart(button) {
+      const product = button.closest('.product');
+      const name = product.querySelector('h3').textContent;
+      const qty = parseInt(product.querySelector('.quantity').textContent);
+      if (qty === 0) {
+        alert('Please select at least one item to add to the cart.');
+        return;
+      }
+      const total = product.querySelector('.total-price').textContent;
+      alert(`Added ${qty} x "${name}" to the cart. Total price: $${total}`);
+      // Here you could add functionality to actually add to a cart system
+    }
+  </script>
+</body>
+</html>

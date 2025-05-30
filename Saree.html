@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saree</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .header {
+            background-color: #007bff;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0;
+        }
+
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            padding: 2rem;
+        }
+
+        .product {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            width: 30%;
+            max-width: 250px;
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+        }
+
+        .product:hover {
+            transform: scale(1.05);
+        }
+
+        .product h3 {
+            margin: 0;
+            padding: 0.5rem;
+        }
+
+        .product p {
+            margin: 0;
+            padding: 0.5rem;
+            background-color: #f8f8f8;
+            font-weight: bold;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #007bff;
+            color: white;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Saree</h1>
+        <nav>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+            
+            </ul>
+          </nav>
+    </div>
+
+    <div class="product-grid">
+        <div class="product">
+            <img src="S1,jpg.webp" alt="Dress 1">
+            <h3>Black</h3>
+            <p>Price: $50</p>
+        </div>
+        <div class="product">
+            <img src="S2.jpg" alt="Dress 2">
+            <h3>Orange</h3>
+            <p>Price: $60</p>
+        </div>
+        <div class="product">
+            <img src="S3.jpg" alt="Dress 3">
+            <h3>Multi Color</h3>
+            <p>Price: $70</p>
+        </div>
+        <div class="product">
+            <img src="S4.jpg" alt="Dress 4">
+            <h3>Megenta </h3>
+            <p>Price: $40</p>
+        </div>
+        <div class="product">
+            <img src="S5.jpg" alt="Dress 5">
+            <h3>Sea Blue</h3>
+            <p>Price: $55</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 Arombho Clothing Store. All Rights Reserved.</p>
+    </div>
+</body>
+</html>
